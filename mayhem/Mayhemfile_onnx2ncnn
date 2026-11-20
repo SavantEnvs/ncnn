@@ -1,0 +1,9 @@
+project: savantenvs/ncnn
+target: onnx2ncnn
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_onnx2ncnn
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/onnx2ncnn/testsuite

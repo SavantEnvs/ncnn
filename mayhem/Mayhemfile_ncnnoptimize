@@ -1,0 +1,9 @@
+project: savantenvs/ncnn
+target: ncnnoptimize
+cmds:
+  - cmd: /mayhem/build-mayhem/ncnnoptimize input.param /dev/null out.param out.bin 0
+    filepath: input.param
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ncnnoptimize/testsuite

@@ -1,0 +1,9 @@
+project: savantenvs/ncnn
+target: ncnn2mem
+cmds:
+  - cmd: /mayhem/build-mayhem/ncnn2mem input.param /dev/null id.h mem.h
+    filepath: input.param
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ncnn2mem/testsuite

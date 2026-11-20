@@ -1,0 +1,9 @@
+project: savantenvs/ncnn
+target: ncnnmerge
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_ncnnmerge
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ncnnmerge/testsuite
