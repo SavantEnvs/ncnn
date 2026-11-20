@@ -1,0 +1,7 @@
+7767517
+5 6
+Input data 0 1 data 0=8 1=8 2=3
+Split sp 1 2 data a b
+BinaryOp add 2 1 a b s 0=0
+UnaryOp u 1 1 s t 0=6
+Interp up 1 1 t out 0=2 1=2.0 2=2.0

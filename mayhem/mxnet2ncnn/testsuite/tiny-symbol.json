@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv0_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "num_filter": "4"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv0_bias", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "num_filter": "4"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv0", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "num_filter": "4", 
+        "pad": "(1, 1)"
+      }, 
+      "inputs": [
+        [0, 0, 0], 
+        [1, 0, 0], 
+        [2, 0, 0]
+      ]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "relu0", 
+      "attrs": {
+        "act_type": "relu"
+      }, 
+      "inputs": [
+        [3, 0, 0]
+      ]
+    }, 
+    {
+      "op": "Pooling", 
+      "name": "pool0", 
+      "attrs": {
+        "kernel": "(2, 2)", 
+        "pool_type": "max", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [
+        [4, 0, 0]
+      ]
+    }, 
+    {
+      "op": "Flatten", 
+      "name": "flat0", 
+      "inputs": [
+        [5, 0, 0]
+      ]
+    }, 
+    {
+      "op": "SoftmaxOutput", 
+      "name": "softmax", 
+      "inputs": [
+        [6, 0, 0]
+      ]
+    }
+  ], 
+  "arg_nodes": [0, 1, 2], 
+  "heads": [[7, 0, 0]]
+}

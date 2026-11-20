@@ -1,0 +1,9 @@
+project: savantenvs/ncnn
+target: darknet2ncnn
+cmds:
+  - cmd: /mayhem/build-mayhem/darknet2ncnn input.cfg /dev/null out.param out.bin
+    filepath: input.cfg
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/darknet2ncnn/testsuite

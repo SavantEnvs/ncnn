@@ -1,0 +1,9 @@
+project: savantenvs/ncnn
+target: caffe2ncnn
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_caffe2ncnn
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/caffe2ncnn/testsuite

@@ -1,0 +1,6 @@
+# build-context pruning for mayhem/Dockerfile (keeps .git; drops local build output)
+build*/
+*.o
+*.a
+*.so
+**/__pycache__/
